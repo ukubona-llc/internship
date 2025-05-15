@@ -56,11 +56,11 @@
 <summary>🌱 Manual Branching via GitHub UI (Starter Level)</summary>
 
 * [x] Open the repo on GitHub in a browser.
-* [x] Click the 🔀 branch dropdown near `main`.
-* [x] Type a new name like `jonathan-notes` → **Create branch**.
-* [x] Click a file (e.g. `README.md`), make a small change.
-* [x] Commit directly to your new branch.
-* [x] Click **Compare & pull request** → Describe your work → **Create pull request**.
+* [ ] Click the 🔀 branch dropdown near `main`.
+* [ ] Type a new name like `jonathan-notes` → **Create branch**.
+* [ ] Click a file (e.g. `README.md`), make a small change.
+* [ ] Commit directly to your new branch.
+* [ ] Click **Compare & pull request** → Describe your work → **Create pull request**.
 
 > 🧠 **Why this matters:** You just forked a path. No one else is touched. This is your test drive.
 
