@@ -9,7 +9,7 @@
 
 ## ✅ 1. Orientation & Progress Tracker
 
-<details open>
+<details >
 <summary>🗂️ Master Checklist</summary>
 
 * [x] Onboarding: GitHub, web pages, and template setup
