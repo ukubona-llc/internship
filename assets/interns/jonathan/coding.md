@@ -1,127 +1,116 @@
 
-## ✅ Branching & Pushing Fluency Tracker
 
-<details>
-<summary>🌐 1. GitHub Web UI (Beginner)</summary>
+## ✅ Git Branching & Pushing Fluency Tracker
 
-- [ ] Open the repo in a browser
-- [ ] Click the 🔀 branch dropdown near "main"
-- [ ] Type new branch name (e.g. `jonathan-notes`) and hit **Create branch**
-- [ ] Click a file to edit (e.g. `README.md`), make a change, and click **Commit changes**
-- [ ] Commit directly to your new branch
-- [ ] Click **Compare & pull request** to open a PR
-- [ ] Add a description and click **Create pull request**
-- [ ] (Optional) Merge it yourself, or wait for review
+<details open>
+<summary>🌱 1. Manual Branching via GitHub UI (Starter Level)</summary>
 
-</details>
+Start by *making your own lane*.
 
-<details>
-<summary>💻 2. GitHub Codespaces (Intermediate)</summary>
+* [x] Open the repo on GitHub in a browser.
+* [x] Click the 🔀 branch dropdown near `main`.
+* [x] Type a new name like `jonathan-notes` → **Create branch**.
+* [x] Click a file (e.g. `README.md`), make a small change.
+* [x] Commit directly to your new branch.
+* [x] Click **Compare & pull request** → Describe your work → **Create pull request**.
 
-- [ ] Click the green **<> Code** button → "Open with Codespaces" → "New codespace"
-- [ ] Open the built-in terminal (`Ctrl+`` or top menu → Terminal → New Terminal)
-- [ ] Create and switch to a new branch:  
-```bash
-  git checkout -b jonathan-notes
-````
-
-* [ ] Make changes in files using the VS Code editor (left panel)
-* [ ] Save changes, then commit in terminal:
-
-  ```bash
-  git add .
-  git commit -m "Added my notes"
-  ```
-* [ ] Push the branch:
-
-  ```bash
-  git push -u origin jonathan-notes
-  ```
-* [ ] Go back to GitHub → Open a pull request from that branch
+> 🧠 **Why this matters:** You just forked a path. No one else is touched. This is your test drive.
 
 </details>
 
 <details>
-<summary>🧠 3. VS Code on Mac (Advanced)</summary>
+<summary>🧹 2. Can't delete that branch? Time to level up (Codespaces)</summary>
 
-* [ ] Confirm Git is installed:
+GitHub UI can **create** branches—but not **delete** them. This is your invitation to **Codespaces**.
 
-  ```bash
-  git --version
-  ```
+* [ ] Click the green **<> Code** button → “Open with Codespaces” → New codespace.
 
-  If not:
+* [ ] In the terminal, confirm you're on your branch:
 
   ```bash
-  brew install git
+  git branch
   ```
-* [ ] Clone the repo from GitHub:
+
+* [ ] To delete your branch (after it's merged):
+
+  ```bash
+  git branch -d jonathan-notes
+  git push origin --delete jonathan-notes
+  ```
+
+> 🧠 **Why this matters:** You now control the lifecycle of a branch—birth *and* death.
+
+</details>
+
+<details>
+<summary>🧠 3. Local Git (VS Code on Mac – Real-World Dev)</summary>
+
+Now you're ready for full autonomy:
+
+* [ ] Open Terminal on your Mac.
+
+* [ ] Clone the repo:
 
   ```bash
   git clone git@github.com:YOUR_USERNAME/YOUR_REPO.git
   cd YOUR_REPO
   ```
-* [ ] Create a new branch:
+
+* [ ] Make a new branch:
 
   ```bash
   git checkout -b jonathan-notes
   ```
-* [ ] Make edits in VS Code
-* [ ] Commit your changes:
+
+* [ ] Edit in VS Code. Save.
+
+* [ ] Commit and push:
 
   ```bash
   git add .
-  git commit -m "My local updates"
-  ```
-* [ ] Push your branch:
-
-  ```bash
+  git commit -m "My local edits"
   git push -u origin jonathan-notes
   ```
-* [ ] Create a pull request via GitHub
+
+* [ ] Open your pull request on GitHub.
+
+> 🧠 **Why this matters:** This is real. It’s how professionals ship code. You can now work offline, push when ready, and handle conflicts like a grown-up.
 
 </details>
 
 <details>
-<summary>🐍 (Optional) Python Setup with venv</summary>
+<summary>🐍 4. (Bonus) Python Setup with `venv`</summary>
 
-> For working with Jupyter Books or Python-powered deploy scripts
+If your repo uses Python (e.g. Jupyter Books, deploy scripts):
 
-* [ ] Install Python (if needed):
+* [ ] Check if Python is installed:
 
   ```bash
-  brew install python
+  python3 --version
   ```
-* [ ] Create a virtual environment:
+
+* [ ] Set up your environment:
 
   ```bash
   python3 -m venv myenv
   source myenv/bin/activate
-  ```
-* [ ] Install dependencies:
-
-  ```bash
   pip install -r requirements.txt
   ```
-* [ ] Run build or deploy scripts:
 
-  ```bash
-  python deploy.py
-  ```
+> 🧠 **Why this matters:** One day you'll want to test your scripts in isolation. This gives you clean rooms for clean experiments.
 
 </details>
 
 ---
 
-**🧭 Pro Tip:** Always double check which branch you're on:
+## 🔁 Daily Drill
+
+Every day, ask:
 
 ```bash
-git branch
+git branch        # Where am I?
+git status        # What changed?
 ```
 
-If you're not on the right one:
-
-```bash
-git checkout your-branch-name
-```
-
+Then *act accordingly*.
+ 
