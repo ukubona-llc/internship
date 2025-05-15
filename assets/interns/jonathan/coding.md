@@ -1,8 +1,4 @@
-Here’s your **intern-ready Markdown tracker**, formatted as a collapsible task list with 🔁 **three environments** (GitHub UI, Codespaces, and local VS Code). It’s efficient, pedagogical, and scalable—ready to embed in his `README.md`.
 
----
-
-````markdown
 ## ✅ Branching & Pushing Fluency Tracker
 
 <details>
@@ -129,9 +125,3 @@ If you're not on the right one:
 git checkout your-branch-name
 ```
 
-```
-
----
-
-Let me know if you want to auto-check these based on actual command history (e.g. by writing a tracker script), or convert this into an HTML-rendered GitHub Pages tracker.
-```
