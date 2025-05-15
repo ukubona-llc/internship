@@ -21,7 +21,7 @@
 - [ ] Click the green **<> Code** button → "Open with Codespaces" → "New codespace"
 - [ ] Open the built-in terminal (`Ctrl+`` or top menu → Terminal → New Terminal)
 - [ ] Create and switch to a new branch:  
-  ```bash
+```bash
   git checkout -b jonathan-notes
 ````
 
