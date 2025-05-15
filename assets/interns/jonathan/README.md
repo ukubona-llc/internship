@@ -1,9 +1,9 @@
 # 📘 Jonathan Gasaatura Internship Log
 
-**Role:** High School Analyst Intern
-**Project:** Orioles Analytics Dashboard
-**Affiliation:** Ukubona LLC
-**Final Goal:** Class presentation showcasing full analytical pipeline and narrative insight
+**Role:** High School Analyst Intern          
+**Project:** Orioles Analytics Dashboard      
+**Affiliation:** Ukubona LLC       
+**Final Goal:** Class presentation showcasing full analytical pipeline and narrative insight      
 
 ---
 
