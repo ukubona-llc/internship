@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ukubona</title>
 <!-- Fallback favicon (used if browser doesn't support media queries) -->
-<link rel="icon" href="https://abikesa.github.io/favicon/favicon-light.ico" type="image/x-icon" />
+<link rel="icon" href="https://abikesa.github.io/favicon/assets/favicon-light.ico" type="image/x-icon" />
 <!-- Favicon for light mode -->
-<link rel="icon" href="https://abikesa.github.io/favicon/favicon-light.ico" type="image/x-icon" media="(prefers-color-scheme: light)" />
+<link rel="icon" href="https://abikesa.github.io/favicon/assets/favicon-light.ico" type="image/x-icon" media="(prefers-color-scheme: light)" />
 <!-- Favicon for dark mode -->
-<link rel="icon" href="https://abikesa.github.io/favicon/favicon-dark.ico" type="image/x-icon" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="https://abikesa.github.io/favicon/assets/favicon-dark.ico" type="image/x-icon" media="(prefers-color-scheme: dark)" />
   <!-- Preload Logo Assets -->
-  <link rel="preload" href="https://abikesa.github.io/logos/ukubona-light-fixed.png" as="image" />
-  <link rel="preload" href="https://abikesa.github.io/logos/ukubona-dark-fixed.png" as="image" />
-
+  <link rel="preload" href="https://abikesa.github.io/logos/assets/ukubona-light.png" as="image" />
+  <link rel="preload" href="https://abikesa.github.io/logos/assets/ukubona-dark.png" as="image" />
+  <!-- Fonts -->
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -65,8 +65,8 @@
     }
 
     .logo-center {
-      width: 220px;
-      height: 220px;
+      width: 400px;
+      height: 400px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -87,8 +87,8 @@
     }
 
     @keyframes spin-light {
-      from { transform: translate(-3px, 16px) scale(0.92) rotate(0deg); }
-      to   { transform: translate(-3px, 16px) scale(0.92) rotate(360deg); }
+      from { transform: translate(-0px, 0px) scale(1) rotate(0deg); }
+      to   { transform: translate(-0px, 0px) scale(1) rotate(360deg); }
     }
 
     #logo {
@@ -211,7 +211,7 @@
 
   <div class="logo-center">
 <img
-  src="https://abikesa.github.io/logos/ukubona-light-fixed.png"
+  src="https://abikesa.github.io/logos/assets/ukubona-light.png"
   alt="Ukubona Logo"
   id="logo"
   loading="eager"
@@ -225,8 +225,8 @@
     const toggleBtn = document.getElementById('toggle-theme');
     const logo = document.getElementById('logo');
 
-    const LIGHT_LOGO = 'https://abikesa.github.io/logos/ukubona-light-fixed.png';
-    const DARK_LOGO  = 'https://abikesa.github.io/logos/ukubona-dark-fixed.png';
+    const LIGHT_LOGO = 'https://abikesa.github.io/logos/assets/ukubona-light.png';
+    const DARK_LOGO  = 'https://abikesa.github.io/logos/assets/ukubona-dark.png';
 
     function setTheme(theme) {
       html.setAttribute('data-theme', theme);
@@ -274,12 +274,12 @@
 
 
     const links = [
-      { name: 'OpenAI', url: 'https://abikesa.github.io/t-s-eliot/gpt-z1.html', icon: '🏺' },
-      { name: 'Epistemology', url: 'https://abikesa.github.io/t-s-eliot/deepseek-1.html', icon: '🧠' },
-      { name: 'Symbolism', url: 'https://abikesa.github.io/t-s-eliot/grok-1.html', icon: '🧿' },
-      { name: 'Architecture', url: 'https://abikesa.github.io/pretty-girl-rock/pretty-hott-.html', icon: '🏛️' },
-      { name: 'Cognition', url: 'https://abikesa.github.io/plant-flag/risk-.html', icon: '🧬' },
-      { name: 'Ukubonaglyph', url: 'https://abikesa.github.io/glyph/glyph-.html', icon: '🎼' }
+      { name: 'GPT-4o', url: 'https://abikesa.github.io/t-s-eliot/gpt-z1.html', icon: '🏺' },
+      { name: 'DeepSeek', url: 'https://abikesa.github.io/t-s-eliot/deepseek-1.html', icon: '🧠' },
+      { name: 'Grok-3', url: 'https://abikesa.github.io/t-s-eliot/grok-1.html', icon: '🧿' },
+      { name: 'Project', url: 'https://abikesa.github.io/pretty-girl-rock/pretty-hott-.html', icon: '🏛️' },
+      { name: 'Testing', url: 'https://abikesa.github.io/plant-flag/risk-.html', icon: '🧬' },
+      { name: 'Launch', url: 'https://abikesa.github.io/glyph/glyph-.html', icon: '🎼' }
     ];
 
     links.forEach((link, i) => {
