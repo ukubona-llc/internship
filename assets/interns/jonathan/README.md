@@ -1,28 +1,29 @@
+
 # 📘 Jonathan Gasaatura Internship Log
 
-**Role:** High School Analyst Intern          
-**Project:** Orioles Analytics Dashboard      
-**Affiliation:** Ukubona LLC       
-**Final Goal:** Class presentation showcasing full analytical pipeline and narrative insight      
+**Role:** High School Analyst Intern  
+**Project:** Orioles Analytics Dashboard  
+**Affiliation:** Ukubona LLC  
+**Final Goal:** Class presentation showcasing full analytical pipeline and narrative insight  
 
 ---
 
 ## ✅ 1. Orientation & Progress Tracker
 
-<details >
+<details>
 <summary>🗂️ Master Checklist</summary>
 
-* [x] Onboarding: GitHub, web pages, and template setup
-* [x] First website: content edits (text, images, `.html`)
-* [ ] Setup local-to-remote GitHub workflow using VS Code
-* [ ] Create and clean up a tidy working directory
-* [ ] Introduce branching for collaborative repo management
-* [ ] Confirm GitHub repo and folder structure are clean and complete
-* [ ] Check that all visuals load and scale on desktop and mobile
-* [ ] Verify HTML styling matches Ukubona brand standards
-* [ ] Identify three core statistical claims in the project
-* [ ] Prepare a 60-second summary of the project
-* [ ] Draft and finalize the project’s opening statement for presentation
+* [x] Onboarding: GitHub, web pages, and template setup  
+* [x] First website: content edits (text, images, `.html`)  
+* [x] Setup local-to-remote GitHub workflow using VS Code  
+* [x] Create and clean up a tidy working directory  
+* [x] Introduce branching for collaborative repo management  
+* [x] Confirm GitHub repo and folder structure are clean and complete  
+* [ ] Check that all visuals load and scale on desktop and mobile  
+* [ ] Verify HTML styling matches Ukubona brand standards  
+* [ ] Identify three core statistical claims in the project  
+* [ ] Prepare a 60-second summary of the project  
+* [ ] Draft and finalize the project’s opening statement for presentation  
 
 </details>
 
@@ -30,21 +31,37 @@
 <summary>📅 Daily Log</summary>
 
 ### May 15, 2025
-
-* [x] Finalized ESPN-style WhatsApp commentary layout
-* [x] Updated OBP trend chart using synthetic game data
-* [ ] Review OBP narrative: Is it more about pitch selection or poor Yankee shifts?
-* [ ] Discuss first draft of presentation outline
+* [x] Finalized ESPN-style WhatsApp commentary layout  
+* [x] Updated OBP trend chart using synthetic game data  
+* [ ] Review OBP narrative: Is it more about pitch selection or poor Yankee shifts?  
+* [ ] Discuss first draft of presentation outline  
 
 ### May 19, 2025
-
-* [ ] Add pitch sequence whiff-rate chart for Grayson Rodriguez
-* [ ] Write “Tactical Takeaways” in bullet form first, then expand to paragraph
-* [ ] Run `git pull` / `git commit` / `git push` practice with local VS Code
+* [x] Add pitch sequence whiff-rate chart for Grayson Rodriguez  
+* [x] Write “Tactical Takeaways” in bullet form first, then expand to paragraph  
+* [x] Run `git pull` / `git commit` / `git push` practice with local VS Code  
+* [x] Submit first pull request and merge to `main`  
+* [x] Deploy live link to class presentation project  
+* [x] Confirm changes visible on public URL  
+* [x] Screenshot merged PR for milestone documentation  
 
 ### May 20, 2025
-
-*(Add notes here...)*
+* [ ] Open Codespaces and explore terminal basics (`ls`, `pwd`, `code .`)  
+* [ ] Create a Codespaces branch and test one-line edit  
+* [ ] Clone GitHub repo to local VS Code using SSH  
+* [ ] Create local branch and make edits  
+* [ ] Push branch to GitHub and open pull request  
+* [ ] Delete branch post-merge (local + remote)  
+* [ ] Learn GPT-4o copy-paste workflow:  
+  * [ ] Ask clear coding questions  
+  * [ ] Understand syntax of reply (HTML, Python, JS)  
+  * [ ] Identify where to paste (correct file, correct line)  
+  * [ ] Test output live (in browser, VS Code, or Python env)  
+  * [ ] Refactor as needed, ask GPT for follow-up  
+* [ ] Discuss coding structure and pacing:  
+  * [ ] Understand indentation  
+  * [ ] Review consistent naming  
+  * [ ] Discuss control flow and readability  
 
 </details>
 
@@ -55,14 +72,12 @@
 <details open>
 <summary>🌱 Manual Branching via GitHub UI (Starter Level)</summary>
 
-* [x] Open the repo on GitHub in a browser.
-* [ ] Click the 🔀 branch dropdown near `main`.
-* [ ] Type a new name like `jonathan-notes` → **Create branch**.
-* [ ] Click a file (e.g. `README.md`), make a small change.
-* [ ] Commit directly to your new branch.
-* [ ] Click **Compare & pull request** → Describe your work → **Create pull request**.
-
-> 🧠 **Why this matters:** You just forked a path. No one else is touched. This is your test drive.
+* [x] Open the repo on GitHub in a browser  
+* [x] Click the 🔀 branch dropdown near `main`  
+* [x] Type a new name like `jonathan-notes` → **Create branch**  
+* [x] Click a file (e.g. `README.md`), make a small change  
+* [x] Commit directly to your new branch  
+* [x] Click **Compare & pull request** → Describe your work → **Create pull request**  
 
 </details>
 
@@ -70,30 +85,21 @@
 <summary>🧹 How to Delete a Git Branch</summary>
 
 <details>
-<summary>🗑️ 1. Delete a <strong>Local</strong> Branch (on your machine)</summary>
+<summary>🗑️ 1. Delete a Local Branch</summary>
 
 ```bash
 git branch -d my-branch       # only if merged
 git branch -D my-branch       # force delete
-```
-
-✅ Works in:
-
-* Codespaces terminal
-* Local VS Code terminal
-
-⚠️ This does **not** affect GitHub.
+````
 
 </details>
 
 <details>
-<summary>🌐 2. Delete a <strong>Remote</strong> Branch (on GitHub)</summary>
+<summary>🌐 2. Delete a Remote Branch (GitHub)</summary>
 
 ```bash
 git push origin --delete my-branch
 ```
-
-Removes the branch from GitHub. Useful after merge or cleanup.
 
 </details>
 
@@ -107,20 +113,13 @@ Removes the branch from GitHub. Useful after merge or cleanup.
 </details>
 
 <details>
-<summary>💡 4. Pro Tips</summary>
+<summary>💡 4. Tips</summary>
 
 ```bash
-git branch      # local
-git branch -r   # remote
-```
-
-You can't delete a branch you're on! Run:
-
-```bash
+git branch      # list local
+git branch -r   # list remote
 git checkout main
 ```
-
-first.
 
 </details>
 
@@ -129,48 +128,47 @@ first.
 <details>
 <summary>💻 Codespaces: Terminal + Confidence</summary>
 
-* [ ] Open Codespaces from GitHub (green **Code** button)
-* [ ] Confirm your branch:
+* [x] Open Codespaces from GitHub (green **Code** button)
+* [x] Confirm your branch:
 
-  ```bash
-  git branch
-  ```
-* [ ] Delete your branch (after merge):
+```bash
+git branch
+```
 
-  ```bash
-  git branch -d your-branch-name
-  git push origin --delete your-branch-name
-  ```
+* [x] Delete your branch (after merge):
 
-> 🧠 **Why this matters:** You now control the full lifecycle of a branch.
+```bash
+git branch -d your-branch-name
+git push origin --delete your-branch-name
+```
 
 </details>
 
 <details>
-<summary>🧰 Local Git via VS Code (Pro-Level)</summary>
+<summary>🧰 Local Git via VS Code</summary>
 
-* [ ] Open Terminal on Mac
-* [ ] Clone the repo:
+* [x] Open Terminal on Mac
+* [x] Clone the repo:
 
-  ```bash
-  git clone git@github.com:YOUR_USERNAME/YOUR_REPO.git
-  cd YOUR_REPO
-  ```
-* [ ] Create a branch:
+```bash
+git clone git@github.com:YOUR_USERNAME/YOUR_REPO.git
+cd YOUR_REPO
+```
 
-  ```bash
-  git checkout -b jonathan-notes
-  ```
-* [ ] Edit in VS Code
-* [ ] Commit + push:
+* [x] Create a branch:
 
-  ```bash
-  git add .
-  git commit -m "My edits"
-  git push -u origin jonathan-notes
-  ```
+```bash
+git checkout -b jonathan-notes
+```
 
-> 🧠 **Why this matters:** This is how real engineers work. You're now independent.
+* [x] Edit in VS Code
+* [x] Commit + push:
+
+```bash
+git add .
+git commit -m "My edits"
+git push -u origin jonathan-notes
+```
 
 </details>
 
@@ -179,18 +177,17 @@ first.
 
 * [ ] Check Python:
 
-  ```bash
-  python3 --version
-  ```
+```bash
+python3 --version
+```
+
 * [ ] Create environment:
 
-  ```bash
-  python3 -m venv myenv
-  source myenv/bin/activate
-  pip install -r requirements.txt
-  ```
-
-> 🧠 Use this for deploying scripts, notebooks, and data science pipelines.
+```bash
+python3 -m venv myenv
+source myenv/bin/activate
+pip install -r requirements.txt
+```
 
 </details>
 
@@ -231,6 +228,3 @@ first.
 
 </details>
 
----
-
-> Tip: This single markdown file tracks learning, shows technical maturity, and builds a shareable portfolio. Jonathan can point to it as evidence of full-stack growth—technical, analytical, and communicative.
