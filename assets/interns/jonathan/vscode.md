@@ -1,141 +1,108 @@
- 
-## 🧠 Ukubona Intern Setup Guide (Mac)
+<h2>🧠 Ukubona Intern Setup Guide (Mac)</h2>
+<blockquote><em>“From zero to <code>git push</code> in 10 minutes.”</em></blockquote>
 
-> *“From zero to `git push` in 10 minutes.”*
+<details open>
+  <summary>🚨 TL;DR — Git on Mac = Xcode Bottleneck</summary>
+  <p>Git on Mac is crippled out-of-the-box. It’s <em>not standalone</em>. It lives <strong>inside</strong> Apple’s <strong>Command Line Tools (CLT)</strong>—installed via:</p>
+  <pre><code>xcode-select --install</code></pre>
+  <p>This is the <strong>first and worst</strong> bottleneck:</p>
+  <ul>
+    <li>No progress bar.</li>
+    <li>No ETA.</li>
+    <li>No escape if the popup breaks.</li>
+  </ul>
+  <p>👉 <strong>Don’t wait. Don’t wonder. Skip Apple.</strong></p>
+</details>
 
----
+<details>
+  <summary>✅ Fastest Path: Homebrew Git (Bypass Apple)</summary>
+  <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install git</code></pre>
+  <p>Now check:</p>
+  <pre><code>git --version
+which git  # should point to /opt/homebrew/bin/git</code></pre>
+  <p>If you still see <code>/usr/bin/git</code>, you're stuck on the Apple leash.</p>
+</details>
 
-### 🚨 TL;DR — Git on Mac = Xcode Bottleneck
+<details>
+  <summary>💻 VS Code Setup (Intern Blitz – 10 min)</summary>
+  <h4>1. Install VS Code</h4>
+  <ul>
+    <li><a href="https://code.visualstudio.com" target="_blank">code.visualstudio.com</a></li>
+    <li>Drag to Applications</li>
+  </ul>
 
-Git on Mac is crippled out-of-the-box. It’s *not standalone*. It lives **inside** Apple’s **Command Line Tools (CLT)**—installed via:
+  <h4>2. Launch & Configure</h4>
+  <ul>
+    <li>Open VS Code → allow system prompts.</li>
+    <li>Go to Extensions and install:
+      <ul>
+        <li>✅ Python</li>
+        <li>✅ Prettier</li>
+        <li>✅ GitHub Copilot (optional)</li>
+      </ul>
+    </li>
+  </ul>
 
-```bash
-xcode-select --install
-```
-
-This is the **first and worst** bottleneck:
-
-* No progress bar.
-* No ETA.
-* No escape if the popup breaks.
-
-👉 **Don’t wait. Don’t wonder. Skip Apple.**
-
----
-
-### ✅ Fastest Path: Homebrew Git (Bypass Apple)
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install git
-```
-
-Now check:
-
-```bash
-git --version
-which git  # should point to /opt/homebrew/bin/git
-```
-
-If you still see `/usr/bin/git`, you're stuck on the Apple leash.
-
----
-
-## 💻 VS Code Setup (Intern Blitz – 10 min)
-
-### 1. **Install VS Code**
-
-* [https://code.visualstudio.com](https://code.visualstudio.com)
-* Drag to Applications.
-
-### 2. **Launch & Configure**
-
-* Open VS Code → allow system prompts.
-* Go to Extensions:
-
-  * ✅ Python
-  * ✅ Prettier
-  * ✅ GitHub Copilot (optional)
-
-### 3. **Create Folder + Test File**
-
-```bash
-mkdir ~/Desktop/intern-project
+  <h4>3. Create Folder + Test File</h4>
+  <pre><code>mkdir ~/Desktop/intern-project
 cd ~/Desktop/intern-project
-code .
-```
+code .</code></pre>
+  <p>Inside VS Code:</p>
+  <ul>
+    <li>Create <code>test.py</code></li>
+    <li>Add:</li>
+  </ul>
+  <pre><code>print("Hello, Ukubona!")</code></pre>
+  <p>Run ▶️ (install interpreter if prompted)</p>
+</details>
 
-Inside VS Code:
+<details>
+  <summary>🚀 Git Push Workflow (From Local → GitHub)</summary>
+  <h4>❓ Ask First</h4>
+  <p><strong>“Do you have a GitHub account?”</strong><br>If not: <a href="https://github.com" target="_blank">github.com</a> → signup + verify email.</p>
 
-* Create `test.py`:
+  <h4>🔧 Terminal Setup</h4>
+  <pre><code>git config --global user.name "Jonathan Gasaatura"
+git config --global user.email "jonathan@example.com"</code></pre>
 
-```python
-print("Hello, Ukubona!")
-```
+  <h4>Create a repo on GitHub</h4>
+  <ul>
+    <li>Go to GitHub → <code>+</code> → New repository</li>
+    <li>Public, no README, click Create</li>
+  </ul>
 
-* Run ▶️ (install interpreter if prompted)
-
----
-
-## 🚀 Git Push Workflow (From Local → GitHub)
-
-### ❓ Ask: “Do you have a GitHub account?”
-
-If not: [github.com](https://github.com) → 2-min signup + email verification.
-
-### 🔧 Terminal Setup
-
-```bash
-git config --global user.name "Jonathan Gasaatura"
-git config --global user.email "jonathan@example.com"
-```
-
-Create a repo online (public, no README).
-
-Then:
-
-```bash
-cd ~/Desktop/intern-project
+  <h4>Then in Terminal:</h4>
+  <pre><code>cd ~/Desktop/intern-project
 git init
 git add index.html
 git commit -m "First commit"
 git remote add origin https://github.com/USERNAME/intern-project.git
 git branch -M main
-git push -u origin main
-```
+git push -u origin main</code></pre>
+  <p>🎉 Refresh GitHub → <code>index.html</code> is live.</p>
+</details>
 
-🎉 Done. Refresh browser → code is live.
-
----
-
-## 🧪 Bonus: Sanity Check for Git + Python
-
-```bash
-git --version
+<details>
+  <summary>🧪 Bonus: Sanity Check for Git + Python</summary>
+  <pre><code>git --version
 which git         # Good = /opt/homebrew/bin/git
 python3 --version # Should not be 2.x
-which python3
-```
+which python3</code></pre>
+</details>
 
----
+<details>
+  <summary>🧱 Optional Add-Ons</summary>
+  <ul>
+    <li><strong>Install Python</strong> via Homebrew:</li>
+  </ul>
+  <pre><code>brew install python</code></pre>
+  <ul>
+    <li><strong>Create virtual environments:</strong></li>
+  </ul>
+  <pre><code>python3 -m venv myenv
+source myenv/bin/activate</code></pre>
+</details>
 
-## 🧱 Optional Add-Ons
-
-* **Install Python** cleanly via Homebrew:
-
-  ```bash
-  brew install python
-  ```
-* **Create virtual environments**:
-
-  ```bash
-  python3 -m venv myenv
-  source myenv/bin/activate
-  ```
-
----
-
-## 🧭 Ukubona Philosophy:
-
-> "Every world-changing tool starts in an empty folder. You own the soil. Now grow something.”
- 
+<blockquote><strong>🧭 Ukubona Philosophy</strong><br>
+“Every world-changing tool starts in an empty folder. You own the soil. Now grow something.”</blockquote>
