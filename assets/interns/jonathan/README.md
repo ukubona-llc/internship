@@ -34,7 +34,7 @@
 * [x] Finalized ESPN-style WhatsApp commentary layout  
 * [x] Updated OBP trend chart using synthetic game data  
 * [ ] Review OBP narrative: Is it more about pitch selection or poor Yankee shifts?  
-* [ ] Discuss first draft of presentation outline  
+* [x ] Discuss first draft of presentation outline  
 
 ### May 19, 2025
 * [x] Add pitch sequence whiff-rate chart for Grayson Rodriguez  
@@ -46,9 +46,9 @@
 * [x] Screenshot merged PR for milestone documentation  
 
 ### May 20, 2025
-* [ ] Open Codespaces and explore terminal basics (`ls`, `pwd`, `code .`)  
-* [ ] Create a Codespaces branch and test one-line edit  
-* [ ] Clone GitHub repo to local VS Code using SSH  
+* [x] Open Codespaces and explore terminal basics (`ls`, `pwd`, `code .`)  
+* [x] Create a Codespaces branch and test one-line edit  
+* [x] Clone GitHub repo to local VS Code using SSH  
 * [ ] Create local branch and make edits  
 * [ ] Push branch to GitHub and open pull request  
 * [ ] Delete branch post-merge (local + remote)  
