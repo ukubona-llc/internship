@@ -92,11 +92,14 @@ git push</code></pre>
 <details open>
   <summary><h1>B. Work from Mac Terminal</h1></summary>
   <ol>
-    <li><code>cat creative.sh</code>
+      <li>Let's run <a href="https://raw.githubusercontent.com/abikesa/creative-destruction/refs/heads/main/destructive.sh">destructive.sh</a> in your terminal command line:
+      <pre><code>curl -fsSL https://raw.githubusercontent.com/abikesa/creative-destruction/refs/heads/main/destructive.sh | bash
+</code></pre> 
+    <li><code>Before creative.sh</code>
       <ul>
-        <li>manually preview file</li>
-        <li>copy and paste <code>xcode</code> line</li>
-        <li><code>xcode-select --install</code></li>
+        <li>copy & paste into terminal: <code>xcode-select -p</code> to confirm <code>destructive.sh</code> did its job</li>
+        <li>now copy and paste the following: <code>xcode-select --install</code></li>
+
         <li>lookout for a pop-up window, click install (takes 5–15 mins)</li>
         <li><code>xcode-select -p</code> confirms installation</li>
         <li>now paste <code>homebrew</code> line:</li>
@@ -113,7 +116,7 @@ brew install --cask visual-studio-code</code></pre>
 
 <details>
   <summary><h1>C. Work from VS Code</h1></summary>
-  <ol start="3">
+  <ol start="4">
     <li>Visual Studio Code installed:
       <pre><code>echo 'export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"' >> ~/.zprofile
 source ~/.zprofile
@@ -141,7 +144,9 @@ cat ~/.gitconfig</code></pre>
     </li>
     <li><a href="https://ukubona-llc.github.io/vscode/">Retired instructions</a></li>
     <li>Pull request</li>
-    <li>Run <a href="https://raw.githubusercontent.com/abikesa/creative-destruction/refs/heads/main/destructive.sh">destructive.sh</a></li>
+    <li>Run <a href="https://raw.githubusercontent.com/abikesa/creative-destruction/refs/heads/main/destructive.sh">destructive.sh</a> to get you back at one!</li>
+          <pre><code>curl -fsSL https://raw.githubusercontent.com/abikesa/creative-destruction/refs/heads/main/destructive.sh | bash </code></pre>
+
   </ol>
 </details>
 

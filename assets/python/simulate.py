@@ -36,7 +36,7 @@ plt.ylabel("Purchase Amount ($)")
 plt.grid(True)
 
 # === Step 5: Save plot as JPEG ===
-jpeg_path = "../outputs/income_vs_purchase.jpeg"
+jpeg_path = "../outputs/soto-analysis-0.jpeg"
 plt.savefig(jpeg_path, format="jpeg")
 print(f"📸 Plot saved as {jpeg_path}")
 
