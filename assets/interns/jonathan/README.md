@@ -19,11 +19,11 @@
 * [x] Create and clean up a tidy working directory  
 * [x] Introduce branching for collaborative repo management  
 * [x] Confirm GitHub repo and folder structure are clean and complete  
-* [ ] Check that all visuals load and scale on desktop and mobile  
+* [x] Check that all visuals load and scale on desktop and mobile  
 * [ ] Verify HTML styling matches Ukubona brand standards  
 * [ ] Identify three core statistical claims in the project  
 * [ ] Prepare a 60-second summary of the project  
-* [ ] Draft and finalize the project’s opening statement for presentation  
+* [x] Draft and finalize the project’s opening statement for presentation  
 
 </details>
 
@@ -34,7 +34,7 @@
 * [x] Finalized ESPN-style WhatsApp commentary layout  
 * [x] Updated OBP trend chart using synthetic game data  
 * [ ] Review OBP narrative: Is it more about pitch selection or poor Yankee shifts?  
-* [x ] Discuss first draft of presentation outline  
+* [x] Discuss first draft of presentation outline  
 
 ### May 19, 2025
 * [x] Add pitch sequence whiff-rate chart for Grayson Rodriguez  
@@ -49,16 +49,16 @@
 * [x] Open Codespaces and explore terminal basics (`ls`, `pwd`, `code .`)  
 * [x] Create a Codespaces branch and test one-line edit  
 * [x] Clone GitHub repo to local VS Code using SSH  
-* [ ] Create local branch and make edits  
-* [ ] Push branch to GitHub and open pull request  
-* [ ] Delete branch post-merge (local + remote)  
-* [ ] Learn GPT-4o copy-paste workflow:  
-  * [ ] Ask clear coding questions  
-  * [ ] Understand syntax of reply (HTML, Python, JS)  
-  * [ ] Identify where to paste (correct file, correct line)  
-  * [ ] Test output live (in browser, VS Code, or Python env)  
-  * [ ] Refactor as needed, ask GPT for follow-up  
-* [ ] Discuss coding structure and pacing:  
+* [x] Create local branch and make edits  
+* [x] Push branch to GitHub and open pull request  
+* [x] Delete branch post-merge (local + remote)  
+* [x] Learn GPT-4o copy-paste workflow:  
+  * [x] Ask clear coding questions  
+  * [x] Understand syntax of reply (HTML, Python, JS)  
+  * [x] Identify where to paste (correct file, correct line)  
+  * [x] Test output live (in browser, VS Code, or Python env)  
+  * [x] Refactor as needed, ask GPT for follow-up  
+* [x] Discuss coding structure and pacing:  
   * [ ] Understand indentation  
   * [ ] Review consistent naming  
   * [ ] Discuss control flow and readability  
@@ -175,13 +175,13 @@ git push -u origin jonathan-notes
 <details>
 <summary>🐍 Bonus: Python Setup with venv</summary>
 
-* [ ] Check Python:
+* [x] Check Python:
 
 ```bash
 python3 --version
 ```
 
-* [ ] Create environment:
+* [x] Create environment:
 
 ```bash
 python3 -m venv myenv
@@ -213,18 +213,7 @@ pip install -r requirements.txt
 
 ### ⏳ Countdown Timeline
 
-| Day     | Focus               | Deliverable                                                     | Blockers                 | Mentor Action                          |
-| ------- | ------------------- | --------------------------------------------------------------- | ------------------------ | -------------------------------------- |
-| T–9     | Define thesis       | 3-sentence focus (OBP surge = plate discipline + shift failure) | Stat clarity             | Offer example thesis formats           |
-| T–8     | Code audit          | One clean repo with data + README                               | Env issues               | Check Python pipeline + data structure |
-| T–7     | Visualizations      | Add xwOBA + pitch sequence plots                                | Aesthetic clutter        | Chart simplification feedback          |
-| T–6     | Writing begins      | 300 words: Grayson, Gunnar, OBP summary                         | Redundancy               | Editing pass + WhatsApp version        |
-| T–5     | Wiki integration    | Add Camden + bullpen to Ukubona HTML                            | TOC formatting           | Check mobile + float layout            |
-| T–4     | Mock presentation 1 | Live demo + slides                                              | Needs hook               | ESPN + Wilde-style dialogue injection  |
-| T–3     | Peer review         | Record or share for peer feedback                               | Script dependence        | Emphasize verbal flow over reading     |
-| T–2     | Polish              | Add favicon, mobile QA, chart labeling                          | Visual last-minute fixes | Run speed + link checks                |
-| T–1     | Rehearsal           | Rehearse 2x + mock Q\&A                                         | Clock issues             | Simulate classroom pressure            |
-| **T–0** | 🎤 Present          | Deliver project to class                                        | None                     | Celebrate + document                   |
+On Schedule!
 
 </details>
 
