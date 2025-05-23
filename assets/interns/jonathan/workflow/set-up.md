@@ -41,6 +41,7 @@ Host github.com
   IdentityFile ~/.ssh/id_ed25519
 
 ssh -T git@github.com
-git push -u origin your-branch-name
-
+git push -u origin i-ukb-0-001
+git push -u origin i-ukb-0-002
+git push origin --delete i-ukb-0-002
 ```
