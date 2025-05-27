@@ -202,6 +202,30 @@
       justify-content: center;
       margin-bottom: 0.5rem;
     }
+  .logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+#logo {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  animation: spin 60s linear infinite;
+  transition: opacity 0.4s ease-in;
+  opacity: 0;
+}
+
+@media (max-width: 600px) {
+  #logo {
+    width: 160px;
+    height: 160px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -217,14 +241,15 @@
     <button id="toggle-theme">🌞 / 🌙</button>
   </div>
 
-  <div class="logo-center">
-<img
-  src="https://abikesa.github.io/logos/assets/ukubona-light.png"
-  alt="Ukubona Logo"
-  id="logo"
-  loading="eager"
-/>
-  </div>
+<div class="logo-wrapper">
+  <img
+    src="https://abikesa.github.io/logos/assets/ukubona-light.png"
+    alt="Ukubona Logo"
+    id="logo"
+    loading="eager"
+  />
+</div>
+
 
 
   <div class="app-grid" id="gridMenu"></div>
