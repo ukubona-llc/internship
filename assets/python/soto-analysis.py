@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 
 # Load data
 soto_2024 = pd.read_csv("../data/soto-2024.csv")
@@ -26,9 +27,12 @@ plt.figure(figsize=(10, 6))
 plt.plot(soto_2024["PlotDate"], soto_2024["rolling_avg"], label="Soto Late 2024", linewidth=2)
 plt.plot(soto_2025["PlotDate"], soto_2025["rolling_avg"], label="Soto Early 2025", linewidth=2)
 
+# Format x-axis to show only Month-Day
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))
+
 # Enhancements
 plt.title("Juan Soto Rolling Hits: With vs. Without Judge")
-plt.xlabel("Game Date (Month-Day, Normalized)")
+plt.xlabel("Game Date")
 plt.ylabel("Hits (10-game rolling avg)")
 plt.legend()
 plt.xticks(rotation=45)

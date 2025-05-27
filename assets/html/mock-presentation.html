@@ -49,7 +49,7 @@
 
   <main id="content">
     <h1>Jonathan Gasaatura</h1>
-    <p><strong>Role:</strong> High School Analyst Intern, Ukubona LLC</p>
+    <p><strong>Role:</strong> Oakton High School Analyst Intern, Ukubona LLC</p>
     <p><strong>Project:</strong> Juan Soto's Batting Trends with and without Lineup Protection by Aaron Judge (Yankees, 2024–2025)</p>
 
     <section>
@@ -84,23 +84,50 @@
       <h2>💻 Code</h2>
       <div class="code-block">
 <pre>
-from pybaseball import statcast_batter
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 
-soto_id = 665742
-soto_2024 = statcast_batter("2024-08-01", "2024-09-30", soto_id)
-soto_2025 = statcast_batter("2025-03-28", "2025-05-22", soto_id)
+# Load data
+soto_2024 = pd.read_csv("../data/soto-2024.csv")
+soto_2025 = pd.read_csv("../data/soto-2025.csv")
 
-soto_2024['season'] = '2024'
-soto_2025['season'] = '2025'
-combined = pd.concat([soto_2024, soto_2025])
+# Convert 'Date' column to datetime
+soto_2024["Date"] = pd.to_datetime(soto_2024["Date"], errors="coerce")
+soto_2025["Date"] = pd.to_datetime(soto_2025["Date"], errors="coerce")
 
-# Plotting xwOBA trend
-combined.groupby('season')['launch_speed'].mean().plot(kind='bar', title='Avg Exit Velocity')
-plt.ylabel('MPH')
-plt.grid(True)
-plt.show()
+# Normalize both to the same year (e.g., 2000) to overlay dates without parallax
+soto_2024["PlotDate"] = soto_2024["Date"].apply(lambda d: d.replace(year=2000) if pd.notnull(d) else pd.NaT)
+soto_2025["PlotDate"] = soto_2025["Date"].apply(lambda d: d.replace(year=2000) if pd.notnull(d) else pd.NaT)
+
+# Sort by normalized date
+soto_2024 = soto_2024.sort_values("PlotDate")
+soto_2025 = soto_2025.sort_values("PlotDate")
+
+# Calculate rolling hits (10-game average)
+soto_2024["rolling_avg"] = soto_2024["H"].rolling(10).mean()
+soto_2025["rolling_avg"] = soto_2025["H"].rolling(10).mean()
+
+# Plot
+plt.figure(figsize=(10, 6))
+plt.plot(soto_2024["PlotDate"], soto_2024["rolling_avg"], label="Soto Late 2024", linewidth=2)
+plt.plot(soto_2025["PlotDate"], soto_2025["rolling_avg"], label="Soto Early 2025", linewidth=2)
+
+# Format x-axis to show only Month-Day
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))
+
+# Enhancements
+plt.title("Juan Soto Rolling Hits: With vs. Without Judge")
+plt.xlabel("Game Date")
+plt.ylabel("Hits (10-game rolling avg)")
+plt.legend()
+plt.xticks(rotation=45)
+plt.grid(True, which='major', linestyle='--', linewidth=0.5)
+plt.tight_layout()
+
+# Save the figure
+plt.savefig("../images/soto-judge-effect.jpeg")
+
 </pre>
       </div>
     </section>
@@ -116,7 +143,7 @@ plt.show()
 
 <section>
   <h2>📸 Output</h2>
-  <img src="./soto-judge-comparison.png" alt="Juan Soto Performance With vs Without Judge"
+  <img src="../images/soto-judge-effect.jpeg" alt="Juan Soto Performance With vs Without Judge"
        style="width: 90%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); display: block; margin: 1.5em auto;" />
   <p class="caption">Figure 1. Decline in exit velocity and zone % in early 2025 after Judge’s injury.</p>
       <p>
