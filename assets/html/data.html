@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Data Sources - The Soto–Judge Effect</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Data Sources</h1>
+  <p>
+    Data was collected using <code>pybaseball</code>, an open-source Python wrapper for Baseball Savant’s Statcast data.
+    We focused on the following time periods and performance metrics for Juan Soto:
+  </p>
+  <ul>
+    <li><strong>Late 2024 (Yankees):</strong> August to September 2024, when Soto batted in front of Aaron Judge.</li>
+    <li><strong>Early 2025 (Mets):</strong> March to May 2025, after Soto signed with the New York Mets and no longer had Judge in the lineup.</li>
+  </ul>
+  <p>
+    Key metrics extracted:
+    <ul>
+      <li>Hits per game</li>
+      <li>Rolling average (10-game window)</li>
+      <li>Plate appearances, walk rate, and pitch zone %</li>
+    </ul>
+  </p>
+  <p>Files used:</p>
+  <ul>
+    <li><code>soto-2024.csv</code></li>
+    <li><code>soto-2025.csv</code></li>
+  </ul>
+</body>
+</html>

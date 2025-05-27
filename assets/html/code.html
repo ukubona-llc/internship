@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Code - The Soto–Judge Effect</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Analysis Code</h1>
+  <p>This Python script was used to process the data and generate the final rolling hits graph:</p>
+  <pre><code>
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+
+soto_2024 = pd.read_csv("../data/soto-2024.csv")
+soto_2025 = pd.read_csv("../data/soto-2025.csv")
+
+soto_2024["Date"] = pd.to_datetime(soto_2024["Date"], errors="coerce")
+soto_2025["Date"] = pd.to_datetime(soto_2025["Date"], errors="coerce")
+
+soto_2024["PlotDate"] = soto_2024["Date"].apply(lambda d: d.replace(year=2000) if pd.notnull(d) else pd.NaT)
+soto_2025["PlotDate"] = soto_2025["Date"].apply(lambda d: d.replace(year=2000) if pd.notnull(d) else pd.NaT)
+
+soto_2024 = soto_2024.sort_values("PlotDate")
+soto_2025 = soto_2025.sort_values("PlotDate")
+
+soto_2024["rolling_avg"] = soto_2024["H"].rolling(10).mean()
+soto_2025["rolling_avg"] = soto_2025["H"].rolling(10).mean()
+
+plt.figure(figsize=(10, 6))
+plt.plot(soto_2024["PlotDate"], soto_2024["rolling_avg"], label="Soto Late 2024", linewidth=2)
+plt.plot(soto_2025["PlotDate"], soto_2025["rolling_avg"], label="Soto Early 2025", linewidth=2)
+
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))
+
+plt.title("Juan Soto Rolling Hits: With vs. Without Judge")
+plt.xlabel("Game Date")
+plt.ylabel("Hits (10-game rolling avg)")
+plt.legend()
+plt.xticks(rotation=45)
+plt.grid(True, which='major', linestyle='--', linewidth=0.5)
+plt.tight_layout()
+
+plt.savefig("../images/soto-judge-effect.jpeg")
+  </code></pre>
+</body>
+</html>
