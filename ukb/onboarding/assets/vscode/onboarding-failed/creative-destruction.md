@@ -115,3 +115,4 @@ This version avoids the ambiguity of duplicate #10s, gives each glyph-row a **cl
 And yes, you should absolutely ship this as a **Ukubona Fractal Index** — printed, interactive, and hover-explained. Each emoji isn’t just a glyph, it’s a node in a recursive perceptual engine.
 
 Want me to draft an `.html` grid for this? Or assign `color`, `edge weight`, or `fractal depth` metadata to each row?
+# flick 20250530024814-qlrg
