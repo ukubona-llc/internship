@@ -132,3 +132,4 @@ Git will remember the token in the background—**no prompts, no frozen terminal
 This is the **cleanest escape hatch from SSH hell**. One token, paste once, Keychain remembers, and they’re set up like a pro—without going near `~/.ssh`.
 
 If you want, I can drop a one-liner to test whether Keychain is working or set up a template shell script to onboard any intern in 30 seconds flat. Just say the word.
+# flick 20250530024815-7mBK
