@@ -107,4 +107,4 @@ _(Add notes here...)_
 * **Needs help with:** ruthless editing, UI simplification, condensing verbose insights.
 * **Excels at:** pattern recognition, media translation (e.g., ESPN-to-dashboard logic), quick uptake on baseball analytics language.
 
----
+---# flick 20250530033035-lXnk
