@@ -27,3 +27,4 @@ Has Juan Soto's performance declined in the early part of the 2025 season compar
 # flick 20250530024814-ygTF
 # flick 20250530031926-uPLx
 # flick 20250531210307-l12K
+# flick 20250602203539-WXS5
