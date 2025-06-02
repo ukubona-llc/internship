@@ -25,7 +25,7 @@ done
 
 # === Validate target ===
 if [ -z "$TARGET_DIR" ]; then
-    echo "❗ Please specify a target directory."
+    echo "❗ Please specify a target directory."   
     exit 1
 fi
 
